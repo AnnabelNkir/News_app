@@ -21,7 +21,7 @@ export class News extends Component {
     category: PropTypes.string,
   };
 
-  //funtion to capitalize first charactor of word
+  //function to capitalize first character of word
   capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
@@ -37,7 +37,7 @@ export class News extends Component {
     };
     
 
-    //it will change title of an site based on catagory severy time you reload this component
+    //it will change title of a site based on category every time you reload this component
     document.title = `newsApp - ${this.capitalizeFirstLetter(
       this.props.category
     )}`;

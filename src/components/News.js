@@ -48,7 +48,7 @@ export class News extends Component {
 
   //it will run after all render method
   async componentDidMount() {
-    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}&pageSize=${this.props.pageSize}`;
+    let url = "https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}&pageSize=${this.props.pageSize}";
     this.setState({ loading: true });
     let data = await fetch(url);
     let parsedData = await data.json();
@@ -68,7 +68,7 @@ export class News extends Component {
     //scroll to top
     window.scrollTo(0, 0)
 
-    let url= `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`
+    let url= "https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}&page=${this.state.page - 1}&pageSize=${this.props.pageSize}"
     this.setState({loading: true})
     let data = await fetch(url)
     let parsedData = await data.json()
@@ -81,12 +81,12 @@ export class News extends Component {
   
   }
 
-  //funtion to handle previous button
+  //function to handle previous button
   handleNextButton= async () => {
       //scroll to top
       window.scrollTo(0, 0)
     
-      let url= `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`
+      let url= "https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}&page=${this.state.page + 1}&pageSize=${this.props.pageSize}"
       this.setState({loading: true})
       let data = await fetch(url)
       let parsedData = await data.json()

@@ -16,7 +16,7 @@ export default class Spinner extends Component {
 
       
       <div>
-          <img style={loadingStyle} src={loading} alt="loding" />
+          <img style={loadingStyle} src={loading} alt="loading" />
       </div>
     )
   }

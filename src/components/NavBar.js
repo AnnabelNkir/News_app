@@ -28,7 +28,7 @@ export default class NavBar extends Component {
                     </Link>
                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                        <li><Link className="dropdown-item" data-bs-target="#navbarSupportedContent" to="/general">General (default)</Link></li>
+                        <li><Link className="dropdown-item" data-bs-target="#navbarSupportedContent" to="./general">General</Link></li>
                         <li><hr className="dropdown-divider"/></li>
                         <li><Link className="dropdown-item" to="./business">Business</Link></li>
                         <li><Link className="dropdown-item" to="./entertainment">Entertainment</Link></li>

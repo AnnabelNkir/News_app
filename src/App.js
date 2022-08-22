@@ -19,8 +19,8 @@ function App() {
     
     <NavBar/>
     <Routes>
-          <Route path="./" element={<News pageSize={PageSize} country="in" category="general"/>} />
-          <Route path="./about"  element={<About/>} />
+          <Route path="/" element={<News pageSize={PageSize} country="in" category="general"/>} />
+          <Route path="/about"  element={<About/>} />
 
           {/* category */}
           <Route exact path="./general" element={<News key="General"  pageSize={PageSize} country="in" category="General"/>} />

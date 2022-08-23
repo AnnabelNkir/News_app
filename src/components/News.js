@@ -10,7 +10,7 @@ export class News extends Component {
   //loading center
 
   static defaultProps = {
-    country: "in",
+    country: "us",
     pageSize: 6,
     category: "general",
   };
@@ -21,7 +21,7 @@ export class News extends Component {
     category: PropTypes.string,
   };
 
-  //function to capitalize first character of word
+  //function to capitalize first charactor of word
   capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
@@ -37,7 +37,7 @@ export class News extends Component {
     };
     
 
-    //it will change title of a site based on category every time you reload this component
+    //it will change title of an site based on catagory severy time you reload this component
     document.title = `newsApp - ${this.capitalizeFirstLetter(
       this.props.category
     )}`;
@@ -48,7 +48,7 @@ export class News extends Component {
 
   //it will run after all render method
   async componentDidMount() {
-    let url = "https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}&pageSize=${this.props.pageSize}";
+    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
     let data = await fetch(url);
     let parsedData = await data.json();
@@ -63,12 +63,12 @@ export class News extends Component {
 
  
 
-  //function to handle next button
+  //funtion to handle next button
   handlePrevButton= async () => {
     //scroll to top
     window.scrollTo(0, 0)
 
-    let url= "https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}&page=${this.state.page - 1}&pageSize=${this.props.pageSize}"
+    let url= `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`
     this.setState({loading: true})
     let data = await fetch(url)
     let parsedData = await data.json()
@@ -86,7 +86,7 @@ export class News extends Component {
       //scroll to top
       window.scrollTo(0, 0)
     
-      let url= "https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}&page=${this.state.page + 1}&pageSize=${this.props.pageSize}"
+      let url= `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`
       this.setState({loading: true})
       let data = await fetch(url)
       let parsedData = await data.json()

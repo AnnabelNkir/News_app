@@ -30,12 +30,12 @@ export default class NavBar extends Component {
 
                         <li><Link className="dropdown-item" data-bs-target="#navbarSupportedContent" to="./general">General</Link></li>
                         <li><hr className="dropdown-divider"/></li>
-                        <li><Link className="dropdown-item" to="./business">Business</Link></li>
-                        <li><Link className="dropdown-item" to="./entertainment">Entertainment</Link></li>
-                        <li><Link className="dropdown-item" to="./health">Health</Link></li>
-                        <li><Link className="dropdown-item" to="./science">Science</Link></li>
-                        <li><Link className="dropdown-item" to="./sports">Sports</Link></li>
-                        <li><Link className="dropdown-item" to="./technology">Technology</Link></li>
+                        <li><Link className="dropdown-item" to="/business">Business</Link></li>
+                        <li><Link className="dropdown-item" to="/entertainment">Entertainment</Link></li>
+                        <li><Link className="dropdown-item" to="/health">Health</Link></li>
+                        <li><Link className="dropdown-item" to="/science">Science</Link></li>
+                        <li><Link className="dropdown-item" to="/sports">Sports</Link></li>
+                        <li><Link className="dropdown-item" to="/technology">Technology</Link></li>
                         
                         
                     </ul>
